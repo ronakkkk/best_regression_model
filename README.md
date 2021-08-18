@@ -18,7 +18,7 @@ The seven regression model used in the given library are:
 
 If you already have a working installation of numpy, scipy and sklearn, the easiest way to install best-classification-model is using pip
 
-#### `pip install bestregressionModel`
+#### `pip install bestregressionmodel`
 
 #### Important links
 

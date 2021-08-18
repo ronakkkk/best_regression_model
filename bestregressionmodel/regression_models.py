@@ -132,15 +132,5 @@ def reg_model(X, Y):
     models = {"Linear Regression": linear_model, "Ridge Regression": ridge_model, "Lasso Regression": lasso_model, "ElasticNet Regression": elasticnet_model,
               "SVR Regression": svr_model, "Poisson Regression": poisson_regressor_model, "Random Forest Regression": rfr_model,
               "Extra Trees Regression": extra_tree_model, "Decision Tree Regression": dec_tree_model}
-
-    print(reg_acc)
+    
     return models[best_model], best_model,reg_acc[best_model]
-
-data = pandas.read_csv("CE802_P3_Data.csv")
-data = data.drop(['F2', 'F15'], axis=1)
-
-X = data.iloc[:,:-1]
-Y = data['Target']
-model, name, acc = reg_model(X, Y)
-
-print(name, ":", acc)

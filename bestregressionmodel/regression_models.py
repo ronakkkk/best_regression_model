@@ -4,7 +4,7 @@ from sklearn.metrics import mean_squared_error
 from sklearn.svm import SVR
 from sklearn.ensemble import RandomForestRegressor, ExtraTreesRegressor
 from sklearn.tree import DecisionTreeRegressor
-import pandas
+
 def reg_model(X, Y):
     '''
     This function helps to define different regression models and return the best regression model based on the accuracy score.

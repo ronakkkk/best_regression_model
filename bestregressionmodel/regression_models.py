@@ -1,4 +1,4 @@
-from sklearn.linear_model import LinearRegression, Ridge, Lasso, ElasticNet, PoissonRegressor
+from sklearn.linear_model import LinearRegression, Ridge, Lasso, ElasticNet
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 from sklearn.svm import SVR
@@ -28,7 +28,7 @@ def reg_model(X, Y):
     ypred = linear_model.predict(Xtest)
 
     # using rmse to deduce best model
-    reg_acc['Linear Regression'] = mean_squared_error(ypred, ytest, squared=False)
+    reg_acc['Linear Regression'] = mean_squared_error(ypred, ytest)
 
     '''Ridge Regression'''
     ridge_model = Ridge()
@@ -40,7 +40,7 @@ def reg_model(X, Y):
     ypred = ridge_model.predict(Xtest)
 
     # using rmse to deduce best model
-    reg_acc['Ridge Regression'] = mean_squared_error(ypred, ytest, squared=False)
+    reg_acc['Ridge Regression'] = mean_squared_error(ypred, ytest)
 
     '''Lasso Regression'''
     lasso_model = Lasso()
@@ -52,7 +52,7 @@ def reg_model(X, Y):
     ypred = lasso_model.predict(Xtest)
 
     # using rmse to deduce best model
-    reg_acc['Lasso Regression'] = mean_squared_error(ypred, ytest, squared=False)
+    reg_acc['Lasso Regression'] = mean_squared_error(ypred, ytest)
 
     '''ElasticNet Regression'''
     elasticnet_model = ElasticNet()
@@ -64,7 +64,7 @@ def reg_model(X, Y):
     ypred = elasticnet_model.predict(Xtest)
 
     # using rmse to deduce best model
-    reg_acc['ElasticNet Regression'] = mean_squared_error(ypred, ytest, squared=False)
+    reg_acc['ElasticNet Regression'] = mean_squared_error(ypred, ytest)
 
     '''Support Vector Regression Regression'''
     svr_model = SVR()
@@ -76,19 +76,7 @@ def reg_model(X, Y):
     ypred = svr_model.predict(Xtest)
 
     # using rmse to deduce best model
-    reg_acc['SVR Regression'] = mean_squared_error(ypred, ytest, squared=False)
-
-    '''Poisson Regression'''
-    poisson_regressor_model = PoissonRegressor()
-
-    # Fit model
-    poisson_regressor_model.fit(Xtrain, ytrain)
-
-    # predict
-    ypred = poisson_regressor_model.predict(Xtest)
-
-    # using rmse to deduce best model
-    reg_acc['Poisson Regression'] = mean_squared_error(ypred, ytest, squared=False)
+    reg_acc['SVR Regression'] = mean_squared_error(ypred, ytest)
 
     '''Random Forest Regression'''
     rfr_model = RandomForestRegressor()
@@ -100,7 +88,7 @@ def reg_model(X, Y):
     ypred = rfr_model.predict(Xtest)
 
     # using rmse to deduce best model
-    reg_acc['Random Forest Regression'] = mean_squared_error(ypred, ytest, squared=False)
+    reg_acc['Random Forest Regression'] = mean_squared_error(ypred, ytest)
 
     '''Extra Trees Regression'''
     extra_tree_model = ExtraTreesRegressor()
@@ -112,7 +100,7 @@ def reg_model(X, Y):
     ypred = extra_tree_model.predict(Xtest)
 
     # using rmse to deduce best model
-    reg_acc['Extra Trees Regression'] = mean_squared_error(ypred, ytest, squared=False)
+    reg_acc['Extra Trees Regression'] = mean_squared_error(ypred, ytest)
 
     '''Decision Tree Regression'''
     dec_tree_model = DecisionTreeRegressor()
@@ -124,13 +112,12 @@ def reg_model(X, Y):
     ypred = dec_tree_model.predict(Xtest)
 
     # using rmse to deduce best model
-    reg_acc['Decision Tree Regression'] = mean_squared_error(ypred, ytest, squared=False)
+    reg_acc['Decision Tree Regression'] = mean_squared_error(ypred, ytest)
 
     # Finding key with maximum accuracy value
     best_model = min(reg_acc, key=reg_acc.get)
 
     models = {"Linear Regression": linear_model, "Ridge Regression": ridge_model, "Lasso Regression": lasso_model, "ElasticNet Regression": elasticnet_model,
-              "SVR Regression": svr_model, "Poisson Regression": poisson_regressor_model, "Random Forest Regression": rfr_model,
-              "Extra Trees Regression": extra_tree_model, "Decision Tree Regression": dec_tree_model}
+              "SVR Regression": svr_model, "Random Forest Regression": rfr_model, "Extra Trees Regression": extra_tree_model, "Decision Tree Regression": dec_tree_model}
     
     return models[best_model], best_model,reg_acc[best_model]

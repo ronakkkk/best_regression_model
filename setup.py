@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 HERE = pathlib.Path(__file__).parent
 
-VERSION = '0.1.1'
+VERSION = '0.1.4'
 PACKAGE_NAME = 'bestregressionmodel'
 AUTHOR = 'Ronak Bhagchandani'
 AUTHOR_EMAIL = 'rishibhagchandani123@gmail.com'

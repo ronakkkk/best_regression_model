@@ -1,18 +1,17 @@
 Pypi Library Link: https://pypi.org/project/bestregressionmodel/0.1.0/
 
-Best Regression Model is used for supervised learning techniques where the target data is in continous form. It selects the best model from the nine regression model based on the Root Mean Square Value (RMSE). 
+Best Regression Model is used for supervised learning techniques where the target data is in continous form. It selects the best model from the eight regression model based on the Root Mean Square Value (RMSE). 
 
-The seven regression model used in the given library are:
+The eight regression model used in the given library are:
 
 1. Linear Regression
 2. Ridge Regression
 3. Lasso Regression
 4. ElasticNet Regression
-5. Poisson Regression
-6. Random Forest Regression
-7. Support Vector Regression
-8. Extra Trees Regression
-9. Decision Tree Regression
+5. Random Forest Regression
+6. Support Vector Regression
+7. Extra Trees Regression
+8. Decision Tree Regression
 
 #### User installation
 

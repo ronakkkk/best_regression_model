@@ -1,4 +1,4 @@
-Pypi Library Link: https://pypi.org/project/bestregressionmodel/
+Pypi Library Link: https://pypi.org/project/best_regression_model/
 
 Best Regression Model is used for supervised learning techniques where the target data is in continous form. It selects the best model from the eight regression model based on the Root Mean Square Value (RMSE). 
 
@@ -23,7 +23,7 @@ If you already have a working installation of numpy, scipy and sklearn, the easi
 
 Official source code repo: https://github.com/ronakkkk/best_regression_model
 
-Download releases: https://pypi.org/project/bestregressionmodel/
+Download releases: https://pypi.org/project/best_regression_model/
 
 #### Examples
 ```import

@@ -21,7 +21,7 @@ If you already have a working installation of numpy, scipy and sklearn, the easi
 
 #### Important links
 
-Official source code repo: https://github.com/ronakkkk/bestregressionmodel
+Official source code repo: https://github.com/ronakkkk/best_regression_model
 
 Download releases: https://pypi.org/project/bestregressionmodel/
 
